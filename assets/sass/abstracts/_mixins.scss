@@ -1,0 +1,23 @@
+@mixin responsive($canvas, $type: min) {
+  @if $canvas == sm {
+    @media (#{$type}-width: $sm) {
+      @content;
+    }
+  } @else if $canvas == md {
+    @media (#{$type}-width: $md) {
+      @content;
+    }
+  } @else if $canvas == lg {
+    @media (#{$type}-width: $lg) {
+      @content;
+    }
+  } @else if $canvas == xl {
+    @media (#{$type}-width: $xl) {
+      @content;
+    }
+  } @else if $canvas == xxl {
+    @media (#{$type}-width: $xxl) {
+      @content;
+    }
+  }
+}

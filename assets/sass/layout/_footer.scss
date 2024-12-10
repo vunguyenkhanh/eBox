@@ -1,0 +1,102 @@
+footer {
+  width: 100%;
+  border-bottom: 5px solid $primary-1;
+  position: relative;
+  background-color: #1568ce;
+  background-image: url(https://st.ebox.com.vn/v367/css/images/graphics/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+
+  .container {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer_logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .logo_vne {
+      margin-left: 45px;
+    }
+  }
+
+  .footer_info {
+    margin-left: auto;
+    color: $primary-4;
+
+    .info {
+      display: flex;
+      text-align: right;
+      align-items: center;
+      margin-bottom: 12px;
+
+      .list_social {
+        margin-bottom: 8px;
+      }
+
+      .item_link {
+        font-style: 16px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $primary-4;
+        margin-left: 32px;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      li {
+        color: $primary-4;
+        font-size: 14px;
+        line-height: 14px;
+        position: relative;
+        margin-left: 20px;
+      }
+    }
+
+    .item_social {
+      position: relative;
+      display: block;
+      width: 36px;
+      height: 36px;
+      background: $primary-4;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+
+      &.facebook {
+        &::before {
+          background-image: url(https://st.ebox.com.vn/v367/css/images/icons/icon-facebook-gray.svg);
+        }
+
+        &:hover {
+          &::before {
+            background-image: url(https://st.ebox.com.vn/v367/css/images/icons/icon-facebook.svg);
+          }
+        }
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .copyright {
+      margin-bottom: 0;
+      font-size: 14px;
+      text-align: right;
+    }
+  }
+}

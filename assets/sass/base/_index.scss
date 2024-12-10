@@ -1,0 +1,22 @@
+html {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  scrollbar-width: thin;
+}
+
+body {
+  color: $primary-6;
+}
+
+.clearfix {
+  clear: both;
+}
+
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
