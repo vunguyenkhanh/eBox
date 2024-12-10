@@ -1180,6 +1180,11 @@
         align-items: center;
         cursor: pointer;
         user-select: none;
+
+        &.swiper-button-disabled {
+          opacity: 0.4;
+          cursor: default;
+        }
       }
 
       .swiper_button_next {
@@ -1195,6 +1200,11 @@
         align-items: center;
         cursor: pointer;
         user-select: none;
+
+        &.swiper-button-disabled {
+          opacity: 0.4;
+          cursor: default;
+        }
       }
     }
   }

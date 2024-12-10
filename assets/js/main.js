@@ -431,7 +431,7 @@ class Countdown {
   }
 }
 
-let endDate = '2024/12/09, 17:39:02';
+let endDate = '2024/12/10, 11:40:02';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({

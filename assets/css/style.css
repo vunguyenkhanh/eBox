@@ -2020,6 +2020,10 @@ footer .footer_info .copyright {
      -moz-user-select: none;
           user-select: none;
 }
+.section_related_area .box_title .group_action_slide .swiper_button_prev.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 .section_related_area .box_title .group_action_slide .swiper_button_next {
   width: 25px;
   height: 25px;
@@ -2035,6 +2039,10 @@ footer .footer_info .copyright {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.section_related_area .box_title .group_action_slide .swiper_button_next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 .section_related_area .related_box_list {
   display: flex;
