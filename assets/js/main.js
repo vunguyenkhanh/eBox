@@ -1,3 +1,4 @@
+// Header Scroll
 $(window).scroll(function () {
   if ($(this).scrollTop() > 1) {
     $('header').addClass('header_sticky');
@@ -6,11 +7,13 @@ $(window).scroll(function () {
   }
 });
 
+// Category filter
 $('.item_category').click(function () {
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
 });
 
+// Price filter
 $('.filter_current').click(function () {
   if ($('.filter_option').css('display') === 'none') {
     $(this).addClass('active');
@@ -27,6 +30,7 @@ $('.filter_item').each(function () {
   });
 });
 
+// FAQ accordion
 $('.card').each(function (index) {
   let collapse = $(this).find('.collapse');
   let btnLink = $(this).find('.btn_link');
@@ -47,6 +51,7 @@ $('.card').each(function (index) {
   });
 });
 
+// Map filter
 $(document).ready(function () {
   const locations = ['#location1', '#location2'];
   const navLinks = $('.contact_map .nav_link');
@@ -66,6 +71,7 @@ $(document).ready(function () {
   });
 });
 
+// Animation người đăng ký
 $(document).ready(function () {
   let messages = [
     '<span class="material-icons">person_add</span> kimk** vừa đăng ký',
@@ -90,6 +96,7 @@ $(document).ready(function () {
   setInterval(showNextMessage, 4000);
 });
 
+// Magnific Popup Image
 $('.item_popup').magnificPopup({
   delegate: 'a',
   type: 'image',
@@ -103,6 +110,7 @@ $('.slide_post').magnificPopup({
   },
 });
 
+// Swiper Slider
 const slide_gallery = new Swiper('.slide_gallery', {
   loop: true,
   slidesPerView: 2.4,
