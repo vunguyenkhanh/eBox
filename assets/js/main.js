@@ -431,7 +431,7 @@ class Countdown {
   }
 }
 
-let endDate = '2024/12/10, 11:40:02';
+let endDate = '2024/12/11, 11:41:01';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({
@@ -473,4 +473,25 @@ $(window).scroll(function () {
   } else {
     $('.sticky_countdown_detail').addClass('hidden');
   }
+});
+
+// Back to Top
+$(document).ready(function () {
+  let lastScrollTop = 0;
+
+  $(window).scroll(function () {
+    let currentScrollTop = $(this).scrollTop();
+
+    if (currentScrollTop < lastScrollTop && currentScrollTop > 500) {
+      $('#to_top').fadeIn();
+    } else {
+      $('#to_top').fadeOut();
+    }
+    lastScrollTop = currentScrollTop;
+  });
+
+  $('#to_top').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
 });

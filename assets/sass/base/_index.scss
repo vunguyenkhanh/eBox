@@ -3,7 +3,40 @@ html {
   display: block;
   width: 100%;
   max-width: 100%;
-  scrollbar-width: thin;
+  // scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.44);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.66);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
 }
 
 body {
@@ -19,4 +52,28 @@ body {
 [type='submit']:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 150px;
+  right: 32px;
+  z-index: 99;
+  display: none;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 48px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url(https://st.ebox.com.vn/v369/css/images/icons/scroll-top-02.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #99b2dc;
+    border-radius: 8px;
+  }
 }
