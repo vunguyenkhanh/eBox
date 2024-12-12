@@ -514,3 +514,17 @@ $(window).click(function (e) {
     popup.css('display', 'none');
   }
 });
+
+// OverlayScrollbars
+const { OverlayScrollbars, ClickScrollPlugin } = OverlayScrollbarsGlobal;
+
+OverlayScrollbars.plugin(ClickScrollPlugin);
+
+OverlayScrollbars(document.body, {
+  scrollbars: {
+    autoHide: 'scroll',
+    autoHideDelay: 1300,
+    autoHideSuspend: false,
+    clickScroll: false,
+  },
+});
