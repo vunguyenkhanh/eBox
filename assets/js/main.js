@@ -102,7 +102,7 @@ $('.item_popup').magnificPopup({
   type: 'image',
 });
 
-$('.slide_post').magnificPopup({
+$('.gallery_popup').magnificPopup({
   delegate: 'a',
   type: 'image',
   gallery: {
