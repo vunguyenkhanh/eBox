@@ -110,6 +110,22 @@ $('.slide_post').magnificPopup({
   },
 });
 
+// Bootbox
+$(document).on('click', '.clickVideo', function () {
+  let url_video;
+  url_video = $(this).attr('data-url');
+
+  let dialogDelete = bootbox.dialog({
+    title: false,
+    message: `<div class="item_image">
+                <iframe class="video" width="730" height="432" src="${url_video}" title="Video eBox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"></iframe>
+              </div>`,
+    closeButton: false,
+    backdrop: true,
+    onEscape: true,
+  });
+});
+
 // Swiper Slider
 const slide_gallery = new Swiper('.slide_gallery', {
   loop: true,
@@ -431,7 +447,7 @@ class Countdown {
   }
 }
 
-let endDate = '2024/12/12, 11:41:01';
+let endDate = '2024/12/12, 17:41:01';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({
