@@ -3,10 +3,10 @@ html {
   display: block;
   width: 100%;
   max-width: 100%;
-  // scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 10px;
+    background: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -41,6 +41,7 @@ html {
 
 body {
   color: $primary-6;
+  scrollbar-gutter: auto;
 }
 
 .clearfix {

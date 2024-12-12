@@ -431,7 +431,7 @@ class Countdown {
   }
 }
 
-let endDate = '2024/12/11, 11:41:01';
+let endDate = '2024/12/12, 11:41:01';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({
@@ -494,4 +494,23 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 'slow');
   });
+});
+
+// Popup Modal Login
+let actionLogin = $('[action="popup_login"]');
+let popup = $('.popup_login');
+let closeBtn = $('.close');
+
+actionLogin.click(function () {
+  popup.css('display', 'block');
+});
+
+closeBtn.click(function () {
+  popup.css('display', 'none');
+});
+
+$(window).click(function (e) {
+  if (e.target === popup[0]) {
+    popup.css('display', 'none');
+  }
 });

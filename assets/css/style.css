@@ -9,6 +9,7 @@ html {
 }
 html::-webkit-scrollbar {
   width: 10px;
+  background: transparent;
 }
 html::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.44);
@@ -37,6 +38,7 @@ html::-webkit-scrollbar-thumb:active {
 
 body {
   color: #444444;
+  scrollbar-gutter: auto;
 }
 
 .clearfix {
@@ -107,6 +109,175 @@ body {
 
 button {
   font-family: "Roboto", sans-serif;
+}
+
+.popup_login {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(11, 11, 11, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.popup_login .popup_content {
+  position: absolute;
+  z-index: 1024;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 383px;
+  height: 95%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.popup_login .box_log {
+  padding: 30px 30px 12px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.popup_login .title_box {
+  text-align: center;
+  color: #333;
+  margin-bottom: 16px;
+}
+.popup_login .title_box p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #444444;
+  margin-bottom: 8px;
+}
+.popup_login .title_box .des {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.popup_login .or_text {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.popup_login .or_text span {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  background: #ffffff;
+  padding: 0 10px;
+}
+.popup_login .or_text::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #dadada;
+  top: 50%;
+  right: 0;
+  margin-top: 1px;
+}
+.popup_login .form_log {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.popup_login .form_log .item_log {
+  margin-bottom: 8px;
+}
+.popup_login .form_log .item_log .social_log {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 30%;
+  height: 44px;
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.popup_login .form_log .item_log .social_log:hover {
+  background: #f5f5f7;
+}
+.popup_login .form_log .item_log .social_log span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.popup_login .form_log .input_form {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 22px;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  color: #222222;
+  padding: 0 15px;
+  outline: 0;
+}
+.popup_login .form_log .item_button {
+  margin-bottom: 0;
+}
+.popup_login .form_log .btn_log {
+  background: #ff7a00;
+  border: 1px solid #ff7a00;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+}
+.popup_login .form_log .btn_disable {
+  background-color: #ceccd2;
+  border-color: #ceccd2;
+}
+.popup_login .link_register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 68px;
+}
+.popup_login .link_register a {
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration-line: underline;
+  display: flex;
+  align-items: center;
+}
+.popup_login .link_register a:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: #dadada;
+  margin: 0 8px;
+}
+.popup_login .close {
+  position: absolute;
+  color: #4f4f4f;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  line-height: 32px;
+  top: -16px;
+  right: -16px;
+  font-size: 35px;
+  font-family: -webkit-body;
 }
 
 .container {
@@ -1239,6 +1410,7 @@ footer .footer_info .copyright {
   font-size: 14px;
 }
 .layout_detail .row_area .card_ticket .price_info .btn_buy_now {
+  position: relative;
   width: 100%;
   margin-top: 12px;
   background: #ff7a00;
@@ -1248,6 +1420,23 @@ footer .footer_info .copyright {
   font-weight: 500;
   line-height: 1.2;
   border-radius: 5px;
+  z-index: 0;
+}
+.layout_detail .row_area .card_ticket .price_info .btn_buy_now::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9533;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out 0s;
+  z-index: -1;
+}
+.layout_detail .row_area .card_ticket .price_info .btn_buy_now:hover::after {
+  width: 100%;
 }
 .layout_detail .row_area .card_ticket .price_info .info_stat {
   margin-top: 12px;
@@ -1535,6 +1724,7 @@ footer .footer_info .copyright {
   color: #dadada;
 }
 .section_ticket_info .price_ticket_info .info_price .btn_addToCart {
+  position: relative;
   margin-top: 10px;
   width: 100%;
   background: #ff7a00;
@@ -1544,6 +1734,23 @@ footer .footer_info .copyright {
   line-height: 1.2;
   padding: 12px 22px;
   border-radius: 5px;
+  z-index: 0;
+}
+.section_ticket_info .price_ticket_info .info_price .btn_addToCart::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9533;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out 0s;
+  z-index: -1;
+}
+.section_ticket_info .price_ticket_info .info_price .btn_addToCart:hover::after {
+  width: 100%;
 }
 .section_ticket_info .price_ticket_info .wrap_countdown .flip-countdown {
   justify-content: start;
@@ -2433,6 +2640,7 @@ footer .footer_info .copyright {
   align-items: flex-end;
 }
 .sticky_countdown_detail .container .wrap_inner .add_to_cart {
+  position: relative;
   min-height: 40px;
   font-size: 18px;
   font-weight: 500;
@@ -2445,4 +2653,21 @@ footer .footer_info .copyright {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
+}
+.sticky_countdown_detail .container .wrap_inner .add_to_cart::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9533;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out 0s;
+  z-index: -1;
+}
+.sticky_countdown_detail .container .wrap_inner .add_to_cart:hover::after {
+  width: 100%;
 }
