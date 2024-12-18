@@ -2676,3 +2676,7 @@ footer .footer_info .copyright {
 .sticky_countdown_detail .container .wrap_inner .add_to_cart:hover::after {
   width: 100%;
 }
+
+.payment_area {
+  min-height: calc(100vh - 55px - 123px);
+}
