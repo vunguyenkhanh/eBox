@@ -544,3 +544,56 @@ OverlayScrollbars(document.body, {
     clickScroll: false,
   },
 });
+
+// Checkbox Payment
+$('.btn_checkbox').click(function () {
+  $(this).toggleClass('active');
+});
+
+// Show/Hide Option Custom
+$('.opt_custom').click(function () {
+  $('.opt_custom_list').toggleClass('show');
+});
+
+// Option Quantity
+$('.control_quantity').each(function () {
+  let quantity = $(this).find('.input_quantity');
+  let downBtn = $(this).find('.down_num');
+  let upBtn = $(this).find('.up_num');
+
+  function updateButtons() {
+    let value = parseInt(quantity.text());
+    downBtn.toggleClass('disable', value <= 1);
+    upBtn.toggleClass('disable', value >= 999);
+  }
+
+  downBtn.click(function () {
+    let value = parseInt(quantity.text());
+    if (value > 1) {
+      quantity.text(value - 1);
+      updateButtons();
+    }
+  });
+
+  upBtn.click(function () {
+    let value = parseInt(quantity.text());
+    if (value < 999) {
+      quantity.text(value + 1);
+      updateButtons();
+    }
+  });
+
+  quantity.on('input', function () {
+    let value = parseInt(quantity.text().replace(/\D/g, ''));
+    if (isNaN(value) || value < 1) {
+      quantity.text(1);
+    } else if (value > 999) {
+      quantity.text(999);
+    } else {
+      quantity.text(value);
+    }
+    updateButtons();
+  });
+
+  updateButtons();
+});
