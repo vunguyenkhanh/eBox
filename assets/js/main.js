@@ -597,3 +597,29 @@ $('.control_quantity').each(function () {
 
   updateButtons();
 });
+
+// Option Size
+$('.opt_custom').each(function () {
+  let optCustomVal = $(this).find('.opt_custom_value p');
+  let optCustomList = $(this).find('.opt_custom_list');
+
+  optCustomList.find('.size_option').click(function () {
+    let selectedSize = $(this).text();
+    optCustomVal.text(selectedSize).addClass('has_choose');
+  });
+});
+
+// Modal Size
+$('#modalSize').click(function () {
+  $('#modalTableSize').css('display', 'block');
+});
+
+$('.btn_close').click(function () {
+  $('#modalTableSize').css('display', 'none');
+});
+
+$(window).click(function (e) {
+  if (e.target === $('#modalTableSize')[0]) {
+    $('#modalTableSize').css('display', 'none');
+  }
+});

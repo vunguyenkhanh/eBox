@@ -191,14 +191,17 @@
                               <li class="size_option">Singlet 2XL</li>
                               <li class="size_option">Singlet 3XL</li>
                             </ul>
-                            <input class="opt_custom_input" type="text" value="" />
                           </div>
                           <div class="control_quantity">
                             <span class="down_num disable" title="Giảm số lượng"></span>
                             <span class="up_num" title="Tăng số lượng"></span>
                             <div class="input_quantity" name="" contenteditable="true">1</div>
                           </div>
-                          <span>Bảng kích thước</span>
+                          <span
+                            id="modalSize"
+                            data-bg-img="https://i.ebox.com.vn/2024/12/04/dc03a7bf_1733280019.jpg?w=0&h=0&q=100&dpr=1&rt=auto&g=no&s=dmEaaNydi4uDS99WDTI2WQ"
+                            >Bảng kích thước</span
+                          >
                         </div>
                         <span class="btn_add_size">+ Thêm tuỳ chọn size</span>
                       </div>
@@ -265,6 +268,7 @@
       </div>
     </footer>
 
+    <!-- Popup Login -->
     <div class="popup_login">
       <div class="popup_content">
         <div class="box_log">
@@ -329,6 +333,22 @@
             <a href="#">Quên mật khẩu?</a>
           </div>
           <button title="Close (Esc)" type="button" class="close">×</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Size -->
+    <div class="modal_size" id="modalTableSize">
+      <div class="modal_size_dialog">
+        <div class="modal_size_content">
+          <div class="modal_size_body">
+            <button type="button" class="btn_close"></button>
+            <img
+              id="imageSize"
+              src="https://i.ebox.com.vn/2024/12/04/dc03a7bf_1733280019.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=1&amp;rt=auto&amp;g=no&amp;s=dmEaaNydi4uDS99WDTI2WQ"
+              alt="Table sizes"
+            />
+          </div>
         </div>
       </div>
     </div>
