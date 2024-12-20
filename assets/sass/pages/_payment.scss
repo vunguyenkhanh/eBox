@@ -287,9 +287,15 @@
             }
           }
 
-          span {
+          .tableSize {
             font-size: 12px;
             color: $primary-blue;
+            cursor: pointer;
+          }
+
+          .delOption {
+            font-size: 12px;
+            color: $primary-8;
             cursor: pointer;
           }
         }

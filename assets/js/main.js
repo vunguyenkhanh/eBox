@@ -550,65 +550,6 @@ $('.btn_checkbox').click(function () {
   $(this).toggleClass('active');
 });
 
-// Show/Hide Option Custom
-$('.opt_custom').click(function () {
-  $('.opt_custom_list').toggleClass('show');
-});
-
-// Option Quantity
-$('.control_quantity').each(function () {
-  let quantity = $(this).find('.input_quantity');
-  let downBtn = $(this).find('.down_num');
-  let upBtn = $(this).find('.up_num');
-
-  function updateButtons() {
-    let value = parseInt(quantity.text());
-    downBtn.toggleClass('disable', value <= 1);
-    upBtn.toggleClass('disable', value >= 999);
-  }
-
-  downBtn.click(function () {
-    let value = parseInt(quantity.text());
-    if (value > 1) {
-      quantity.text(value - 1);
-      updateButtons();
-    }
-  });
-
-  upBtn.click(function () {
-    let value = parseInt(quantity.text());
-    if (value < 999) {
-      quantity.text(value + 1);
-      updateButtons();
-    }
-  });
-
-  quantity.on('input', function () {
-    let value = parseInt(quantity.text().replace(/\D/g, ''));
-    if (isNaN(value) || value < 1) {
-      quantity.text(1);
-    } else if (value > 999) {
-      quantity.text(999);
-    } else {
-      quantity.text(value);
-    }
-    updateButtons();
-  });
-
-  updateButtons();
-});
-
-// Option Size
-$('.opt_custom').each(function () {
-  let optCustomVal = $(this).find('.opt_custom_value p');
-  let optCustomList = $(this).find('.opt_custom_list');
-
-  optCustomList.find('.size_option').click(function () {
-    let selectedSize = $(this).text();
-    optCustomVal.text(selectedSize).addClass('has_choose');
-  });
-});
-
 // Modal Size
 $('#modalSize').click(function () {
   $('#modalTableSize').css('display', 'block');
@@ -623,3 +564,102 @@ $(window).click(function (e) {
     $('#modalTableSize').css('display', 'none');
   }
 });
+
+// Add Option Size
+$('.btn_add_size').on('click', function () {
+  let htmlDiv = `<div class="gr_input">
+                    <div class="opt_custom">
+                      <div class="opt_custom_value">
+                        <p>Chọn size</p>
+                      </div>
+                      <ul class="opt_custom_list">
+                        <li class="size_option">T-shirt XS</li>
+                        <li class="size_option">T-shirt S</li>
+                        <li class="size_option">T-shirt M</li>
+                        <li class="size_option">T-shirt L</li>
+                        <li class="size_option">T-shirt XL</li>
+                        <li class="size_option">T-shirt 2XL</li>
+                        <li class="size_option">T-shirt 3XL</li>
+                        <li class="size_option">Singlet XS</li>
+                        <li class="size_option">Singlet S</li>
+                        <li class="size_option">Singlet M</li>
+                        <li class="size_option">Singlet L</li>
+                        <li class="size_option">Singlet XL</li>
+                        <li class="size_option">Singlet 2XL</li>
+                        <li class="size_option">Singlet 3XL</li>
+                      </ul>
+                    </div>
+                    <div class="control_quantity">
+                      <span class="down_num disable" title="Giảm số lượng"></span>
+                      <span class="up_num" title="Tăng số lượng"></span>
+                      <div class="input_quantity" name="" contenteditable="true">1</div>
+                    </div>
+                    <span class="delOption">Xoá</span>
+                  </div>`;
+  $(this).before(htmlDiv);
+});
+
+// Delete gr_input
+$(document).on('click', '.delOption', function () {
+  $(this).closest('.gr_input').remove();
+});
+
+// Show/Hide & Choose Option Size
+$(document).on('click', '.opt_custom', function () {
+  $('.opt_custom_list').not($(this).find('.opt_custom_list')).removeClass('show');
+  $(this).find('.opt_custom_list').toggleClass('show');
+
+  let optCustomVal = $(this).find('.opt_custom_value p');
+  let optCustomList = $(this).find('.opt_custom_list');
+
+  optCustomList.find('.size_option').click(function () {
+    let selectedSize = $(this).text();
+    optCustomVal.text(selectedSize).addClass('has_choose');
+  });
+});
+
+$(document).click(function (e) {
+  if (!$(e.target).closest('.opt_custom').length) {
+    $('.opt_custom_list').removeClass('show');
+  }
+});
+
+// Option Quantity
+$(document).on('click', '.control_quantity .down_num', function () {
+  let quantity = $(this).siblings('.input_quantity');
+  let value = parseInt(quantity.text());
+  if (value > 1) {
+    quantity.text(value - 1);
+    updateButtons(quantity);
+  }
+});
+
+$(document).on('click', '.control_quantity .up_num', function () {
+  let quantity = $(this).siblings('.input_quantity');
+  let value = parseInt(quantity.text());
+  if (value < 999) {
+    quantity.text(value + 1);
+    updateButtons(quantity);
+  }
+});
+
+$(document).on('input', '.control_quantity .input_quantity', function () {
+  let quantity = $(this);
+  let value = parseInt(quantity.text().replace(/\D/g, ''));
+  if (isNaN(value) || value < 1) {
+    quantity.text(1);
+  } else if (value > 999) {
+    quantity.text(999);
+  } else {
+    quantity.text(value);
+  }
+  updateButtons(quantity);
+});
+
+function updateButtons(quantity) {
+  let value = parseInt(quantity.text());
+  let downBtn = quantity.siblings('.down_num');
+  let upBtn = quantity.siblings('.up_num');
+  downBtn.toggleClass('disable', value <= 1);
+  upBtn.toggleClass('disable', value >= 999);
+}
