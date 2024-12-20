@@ -669,3 +669,8 @@ function updateButtons(quantity) {
 $('.item_method').click(function () {
   $(this).closest('.group_item').addClass('active').siblings().removeClass('active');
 });
+
+// Show payment invoice
+$('#invoice').click(function () {
+  $('.wrap_show_form_export_order').toggleClass('show');
+});
