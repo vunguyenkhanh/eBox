@@ -211,6 +211,88 @@
                 </fieldset>
               </form>
             </section>
+            <div class="wrap_list_payment">
+              <div class="card_header">Chọn phương thức thanh toán<span>*</span></div>
+              <div class="card_body">
+                <div class="wrap_payment_item">
+                  <form action="" id="formPayment">
+                    <div class="list_payment_methods">
+                      <div class="group_item active">
+                        <div class="icon_payment">
+                          <img
+                            src="https://st.ebox.com.vn/v48/images/graphics/thanh-toan-qua-momo.svg"
+                            alt="Icon thanh toán ví"
+                          />
+                        </div>
+                        <div class="wrap_option">
+                          <label class="item_method">
+                            <input
+                              type="radio"
+                              name="payment_method"
+                              value="momo"
+                              checked=""
+                              required=""
+                            />
+                            <span class="label_name">Ví MoMo</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="group_item">
+                        <div class="icon_payment">
+                          <img
+                            src="https://st.ebox.com.vn/v48/images/graphics/thanh-toan-chuyen-khoan.svg"
+                            alt="Icon chuyển khoản"
+                          />
+                        </div>
+                        <div class="wrap_option">
+                          <label class="item_method">
+                            <input type="radio" name="payment_method" value="transfer" />
+                            <span class="label_name">Chuyển khoản</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="group_item group_item_full">
+                        <div class="icon_payment">
+                          <img
+                            src="https://st.ebox.com.vn/v48/images/graphics/thanh-toan-napas.png"
+                            alt="Icon thẻ thanh toán"
+                          />
+                        </div>
+                        <div class="wrap_option">
+                          <label class="item_method">
+                            <input type="radio" name="payment_method" value="napas" required="" />
+                            <span class="label_name">Thẻ quốc tế (Visa, MasterCard, JCB,...)</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="item_method">
+                            <input type="radio" name="payment_method" value="napas" required="" />
+                            <span class="label_name">
+                              Thẻ ATM, tài khoản mở tại ngân hàng Việt Nam
+                            </span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment_sub">
+                        <div>
+                          <span>*</span> Thanh toán bằng Momo, Napas để được kích hoạt xem chương
+                          trình ngay.<br />
+                          Với hình thức chuyển khoản, hệ thống cần 4-24h làm việc trong tuần để kích
+                          hoạt.
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <label class="checkbox_invoicing" for="invoice">
+                  <input type="checkbox" name="invoice" id="invoice" />
+                  <span class="label_name">Chọn để xuất hoá đơn.</span>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
           </div>
           <div class="cell_end_area">
             <div class="cell_inner">Thông tin thanh toán</div>

@@ -618,6 +618,7 @@ $(document).on('click', '.opt_custom', function () {
   });
 });
 
+// Hide opt_custom_list when click outside
 $(document).click(function (e) {
   if (!$(e.target).closest('.opt_custom').length) {
     $('.opt_custom_list').removeClass('show');
@@ -663,3 +664,8 @@ function updateButtons(quantity) {
   downBtn.toggleClass('disable', value <= 1);
   upBtn.toggleClass('disable', value >= 999);
 }
+
+// Active payment option
+$('.item_method').click(function () {
+  $(this).closest('.group_item').addClass('active').siblings().removeClass('active');
+});
