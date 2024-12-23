@@ -780,6 +780,48 @@
           font-weight: 500;
         }
       }
+
+      .display_discount_applied {
+        position: relative;
+
+        .item_discount {
+          display: flex;
+          align-items: center;
+          margin-top: 8px;
+
+          .tag_badge {
+            margin-right: 8px;
+            position: relative;
+            background-color: $secondary-blue;
+            color: $primary-4;
+            border-radius: 1px;
+            min-width: 90px;
+            height: 32px;
+            padding: 0 8px;
+            font-size: 16px;
+            line-height: 20px;
+            overflow: hidden;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            [class*='material-'] {
+              margin-left: 5px;
+              margin-right: 0;
+              width: 16px;
+              font-size: 16px;
+            }
+          }
+
+          .btn_remove {
+            margin-left: 12px;
+            color: #e53832;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

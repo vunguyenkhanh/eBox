@@ -519,7 +519,6 @@
                                 id="customer_phone"
                                 name="customer_phone"
                                 type="phone"
-                                maxlength="13"
                                 placeholder=""
                                 class="form_control"
                                 spellcheck="false"
@@ -570,7 +569,7 @@
                     id="productItem"
                   >
                     <div>Giá vật phẩm <span class="txt_secondary" id="qty_count">x1</span></div>
-                    <span id="productItemPrice" class="value">270.000 đ</span>
+                    <span id="productItemPrice" class="value"></span>
                   </div>
                   <div class="wrap_discount_offers d-none">
                     <span class="this_label"> Giảm giá </span>
@@ -580,7 +579,7 @@
                 <div class="bill_foot">
                   <div class="total_amount">
                     <div class="d-flex align-items-center justify-content-between">
-                      Tổng tiền: <span class="value totalPrice">300.000 đ</span>
+                      Tổng tiền: <span class="value totalPrice"></span>
                     </div>
                   </div>
                   <div class="wrap_btn_checkout">
@@ -597,6 +596,15 @@
                     <span class="btn_headline">Chọn mã</span>
                   </div>
                   <div class="discount_sub">(Bạn có <span>1</span> mã giảm giá)</div>
+                  <div class="display_discount_applied d-none">
+                    <div class="item_discount">
+                      <div class="tag_badge">
+                        <span class="tag_title">Combo giảm 100k</span>
+                        <span class="material-symbols-outlined tag_tooltip"> info </span>
+                      </div>
+                      <span class="btn_remove">Xóa</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

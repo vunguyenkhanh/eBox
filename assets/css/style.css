@@ -3418,6 +3418,43 @@ footer .footer_info .copyright {
   color: #ff7a00;
   font-weight: 500;
 }
+.payment_area .wrap_bill .wrap_show_discount .display_discount_applied {
+  position: relative;
+}
+.payment_area .wrap_bill .wrap_show_discount .display_discount_applied .item_discount {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.payment_area .wrap_bill .wrap_show_discount .display_discount_applied .item_discount .tag_badge {
+  margin-right: 8px;
+  position: relative;
+  background-color: #2a8cee;
+  color: #ffffff;
+  border-radius: 1px;
+  min-width: 90px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment_area .wrap_bill .wrap_show_discount .display_discount_applied .item_discount .tag_badge [class*=material-] {
+  margin-left: 5px;
+  margin-right: 0;
+  width: 16px;
+  font-size: 16px;
+}
+.payment_area .wrap_bill .wrap_show_discount .display_discount_applied .item_discount .btn_remove {
+  margin-left: 12px;
+  color: #e53832;
+  font-weight: 500;
+  cursor: pointer;
+}
 
 .modal_size {
   position: fixed;

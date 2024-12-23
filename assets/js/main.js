@@ -719,7 +719,61 @@ $('.btn_checkbox').click(function () {
 
   if ($('.btn_checkbox.active').length == 2) {
     $('.wrap_discount_offers').removeClass('d-none');
+    $('.display_discount_applied').removeClass('d-none');
   } else {
     $('.wrap_discount_offers').addClass('d-none');
+    $('.display_discount_applied').addClass('d-none');
   }
 });
+
+// Calculate product price
+function calculateProductPrice() {
+  let totalPrice = 0;
+  let totalQuantity = 0;
+
+  $('.btn_checkbox.active').each(function () {
+    let itemCart = $(this).closest('.item_cart');
+    let itemPrice = parseInt(itemCart.find('.item_price').text().replace(/\D/g, ''));
+    let quantity = parseInt(itemCart.find('.input_quantity').text());
+
+    if (!isNaN(itemPrice) && !isNaN(quantity)) {
+      totalPrice += itemPrice * quantity;
+      totalQuantity += quantity;
+    }
+  });
+
+  $('#productItemPrice').text(totalPrice.toLocaleString('vi-VN') + ' đ');
+  $('#qty_count').text('x' + totalQuantity);
+  calculateTotalPrice();
+}
+
+// Calculate total price
+function calculateTotalPrice() {
+  let coursePrice = parseInt($('.course_price_value').text().replace(/\D/g, '')) || 0;
+  let productPrice = parseInt($('#productItemPrice').text().replace(/\D/g, '')) || 0;
+  let discount = 0;
+
+  if ($('.btn_checkbox.active').length == 2) {
+    discount = parseInt($('.discount_value').text().replace(/\D/g, '')) || 0;
+  }
+
+  let totalPrice = coursePrice + productPrice - discount;
+  $('.totalPrice').text(totalPrice.toLocaleString('vi-VN') + ' đ');
+}
+
+// Call the function when quantity changes
+$(document).on('click', '.control_quantity .down_num, .control_quantity .up_num', function () {
+  calculateProductPrice();
+});
+
+$(document).on('input', '.control_quantity .input_quantity', function () {
+  calculateProductPrice();
+});
+
+// Call the function when checkbox is toggled
+$('.btn_checkbox').click(function () {
+  calculateProductPrice();
+});
+
+// Initial calculation
+calculateProductPrice();
