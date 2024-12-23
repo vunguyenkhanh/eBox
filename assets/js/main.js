@@ -1,3 +1,68 @@
+// Get data from json file
+async function getData() {
+  let url = './assets/data/locations.json';
+  try {
+    let response = await fetch(url);
+    if (!response.ok) throw new Error(`Response status: ${response.status}`);
+    let data = await response.json();
+    // Sort data alphabetically by Name
+    data.sort((a, b) => a.Name.localeCompare(b.Name));
+    bindDataToUI(data);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+function bindDataToUI(data) {
+  let locationSelect = $('#frm_buy_personal_province');
+  let districtSelect = $('#frm_buy_personal_district');
+  let communeSelect = $('#frm_buy_personal_commune');
+
+  let defaultOptions = {
+    location: '<option value="">Chọn tỉnh thành</option>',
+    district: '<option value="">Chọn quận huyện</option>',
+    commune: '<option value="">Chọn xã phường</option>',
+  };
+
+  locationSelect.append(defaultOptions.location);
+  districtSelect.append(defaultOptions.district);
+  communeSelect.append(defaultOptions.commune);
+
+  data.forEach((location) => {
+    locationSelect.append(new Option(location.Name, location.Id));
+  });
+
+  locationSelect.on('change', function () {
+    let selectedLocation = data.find((location) => location.Id === this.value);
+    districtSelect.empty().append(defaultOptions.district);
+    communeSelect.empty().append(defaultOptions.commune);
+
+    if (selectedLocation) {
+      selectedLocation.Districts.sort((a, b) => a.Name.localeCompare(b.Name));
+      selectedLocation.Districts.forEach((district) => {
+        districtSelect.append(new Option(district.Name, district.Id));
+      });
+    }
+  });
+
+  districtSelect.on('change', function () {
+    let selectedLocation = data.find((location) => location.Id === locationSelect.val());
+    let selectedDistrict = selectedLocation?.Districts.find(
+      (district) => district.Id === this.value
+    );
+    communeSelect.empty().append(defaultOptions.commune);
+
+    if (selectedDistrict) {
+      selectedDistrict.Wards.sort((a, b) => a.Name.localeCompare(b.Name));
+      selectedDistrict.Wards.forEach((commune) => {
+        communeSelect.append(new Option(commune.Name, commune.Id));
+      });
+    }
+  });
+}
+
+getData();
+
 // Header Scroll
 $(window).scroll(function () {
   if ($(this).scrollTop() > 1) {
