@@ -548,11 +548,18 @@ OverlayScrollbars(document.body, {
 // Checkbox Payment
 $('.btn_checkbox').click(function () {
   $(this).toggleClass('active');
-  $('.validate_shipping_cart').toggleClass('d-none');
-  $('.wrap_txt_note').toggleClass('d-none');
 });
 
-// Modal Size
+$('.btn_checkbox').click(function () {
+  if ($('.btn_checkbox.active').length > 0) {
+    $('.validate_shipping_cart').removeClass('d-none');
+    $('.wrap_txt_note').removeClass('d-none');
+  } else {
+    $('.validate_shipping_cart').addClass('d-none');
+    $('.wrap_txt_note').addClass('d-none');
+  }
+});
+
 $('#modalSize').click(function () {
   $('#modalTableSize').css('display', 'block');
 });
