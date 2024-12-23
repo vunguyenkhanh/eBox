@@ -549,6 +549,7 @@ OverlayScrollbars(document.body, {
 $('.btn_checkbox').click(function () {
   $(this).toggleClass('active');
   $('.validate_shipping_cart').toggleClass('d-none');
+  $('.wrap_txt_note').toggleClass('d-none');
 });
 
 // Modal Size
