@@ -791,6 +791,10 @@ $('.btn_checkbox').click(function () {
   }
 });
 
+$('.btn_remove').click(function () {
+  $('.display_discount_applied').addClass('d-none');
+});
+
 // Calculate product price
 function calculateProductPrice() {
   let totalPrice = 0;
