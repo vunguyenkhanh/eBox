@@ -3169,6 +3169,97 @@ footer .footer_info .copyright {
   transform: rotateZ(45deg);
   visibility: hidden;
 }
+.payment_area .wrap_form_infomation .wrap_form_infomation_inner {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+.payment_area .wrap_form_infomation .heading_group {
+  margin-top: 0;
+}
+.payment_area .wrap_form_infomation .col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+.payment_area .wrap_form_infomation .col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.payment_area .wrap_form_infomation .row_group_item {
+  background: #f5f5f7;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
+.payment_area .wrap_form_infomation .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+.payment_area .wrap_form_infomation .row > * {
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 16px;
+}
+.payment_area .wrap_form_infomation .mt-0 {
+  margin-top: 0;
+}
+.payment_area .wrap_form_infomation .g-3 {
+  margin-top: -16px;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.payment_area .wrap_form_infomation .col_form_label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  margin-top: 0;
+  padding: 7px 12px;
+}
+.payment_area .wrap_form_infomation .txt_red {
+  color: #e53832;
+}
+.payment_area .wrap_form_infomation .form_control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #dee2e6;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.payment_area .wrap_form_infomation .form_control[readonly] {
+  background-color: #dadada;
+}
+.payment_area .wrap_form_infomation select {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 12px;
+}
+.payment_area .wrap_form_infomation .wrap_txt_note {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.d-none {
+  display: none;
+}
 
 .modal_size {
   position: fixed;

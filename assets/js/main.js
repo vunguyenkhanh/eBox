@@ -548,6 +548,7 @@ OverlayScrollbars(document.body, {
 // Checkbox Payment
 $('.btn_checkbox').click(function () {
   $(this).toggleClass('active');
+  $('.validate_shipping_cart').toggleClass('d-none');
 });
 
 // Modal Size

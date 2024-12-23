@@ -208,6 +208,166 @@
                       </div>
                     </div>
                   </div>
+                  <div class="wrap_form_infomation">
+                    <div class="wrap_form_infomation_inner">
+                      <div class="heading_group">
+                        <input type="hidden" id="status_shipping" value="active" />
+                        Thông tin nhận hàng
+                      </div>
+                      <div class="row_group_item col-12">
+                        <div class="row g-3">
+                          <div class="col-4">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_name"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Họ và tên<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <input
+                                  type="text"
+                                  class="form_control"
+                                  name="fullname"
+                                  value=""
+                                  id="frm_buy_personal_name"
+                                  placeholder="Nhập họ và tên"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_email"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Email<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <input
+                                  type="email"
+                                  class="form_control"
+                                  name="email"
+                                  id="frm_buy_personal_email"
+                                  placeholder="Nhập email"
+                                  value=""
+                                  required=""
+                                  readonly=""
+                                  disabled=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_phone"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Số điện thoại<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <input
+                                  type="text"
+                                  class="form_control f_number"
+                                  name="phone"
+                                  value=""
+                                  id="frm_buy_personal_phone"
+                                  placeholder="Nhập số điện thoại"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-4 validate_shipping_cart">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_province"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Tỉnh thành<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <select
+                                  class="form_control validate_shipping"
+                                  name="ship[province]"
+                                  id="frm_buy_personal_province"
+                                >
+                                  <option value="" selected="">Chọn tỉnh thành</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4 validate_shipping_cart">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_district"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Quận huyện<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <select
+                                  class="form_control validate_shipping"
+                                  name="ship[district]"
+                                  id="frm_buy_personal_district"
+                                >
+                                  <option value="" selected="">Chọn quận huyện</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-4 validate_shipping_cart">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_commune"
+                                class="form_label col-12 col_form_label"
+                              >
+                                Xã phường<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <select
+                                  class="form_control validate_shipping"
+                                  name="ship[commune]"
+                                  id="frm_buy_personal_commune"
+                                >
+                                  <option value="" selected="">Chọn xã phường</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 validate_shipping_cart">
+                            <div class="form_group row">
+                              <label
+                                for="frm_buy_personal_street"
+                                class="for_mlabel col-12 col_form_label"
+                              >
+                                Địa chỉ cụ thể<span class="txt_red">*</span>
+                              </label>
+                              <div class="col-12 mt-0">
+                                <input
+                                  type="text"
+                                  class="form_control validate_shipping"
+                                  name="ship[street]"
+                                  id="frm_buy_personal_street"
+                                  placeholder=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrap_txt_note">
+                      <p>
+                        <span class="txt_red">*</span> Bạn cần hoàn thành khóa học để nhận được
+                        chứng chỉ và vật phẩm. eBox sẽ gửi các vật phẩm về địa chỉ mà bạn cung cấp.
+                      </p>
+                    </div>
+                  </div>
                 </fieldset>
               </form>
             </section>
@@ -342,6 +502,9 @@
                                 placeholder=""
                                 class="form_control"
                                 spellcheck="false"
+                                required
+                                readonly
+                                disabled
                               />
                             </div>
                           </div>
@@ -384,7 +547,7 @@
                       </div>
 
                       <div class="txt_note">
-                        <span class="txt-red">*</span> Hoá đơn được xuất trong vòng 45 ngày kể từ
+                        <span class="txt_red">*</span> Hoá đơn được xuất trong vòng 45 ngày kể từ
                         khi thanh toán thành công.
                       </div>
                     </div>
