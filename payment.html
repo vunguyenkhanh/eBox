@@ -557,7 +557,49 @@
             </div>
           </div>
           <div class="cell_end_area">
-            <div class="cell_inner">Thông tin thanh toán</div>
+            <div class="cell_inner wrap_bill_sticky">
+              <div class="wrap_bill">
+                <div class="bill_body">
+                  <div class="headline_box">Thông tin thanh toán</div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>Giá khóa học</div>
+                    <span class="value course_price_value">300.000 đ</span>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between mt-3 d-none"
+                    id="productItem"
+                  >
+                    <div>Giá vật phẩm <span class="txt_secondary" id="qty_count">x1</span></div>
+                    <span id="productItemPrice" class="value">270.000 đ</span>
+                  </div>
+                  <div class="wrap_discount_offers d-none">
+                    <span class="this_label"> Giảm giá </span>
+                    <span class="this_value">- <span class="discount_value">100.000 đ</span></span>
+                  </div>
+                </div>
+                <div class="bill_foot">
+                  <div class="total_amount">
+                    <div class="d-flex align-items-center justify-content-between">
+                      Tổng tiền: <span class="value totalPrice">300.000 đ</span>
+                    </div>
+                  </div>
+                  <div class="wrap_btn_checkout">
+                    <button id="btn_payment" class="btn_bill_checkout">Thanh toán ngay</button>
+                    <div class="wrap_countdown_payment">
+                      <div class="countdown_sub">Hết hạn sau:</div>
+                      <div class="flip-countdown countdown_payment"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap_show_discount">
+                  <div class="title_box">
+                    Mã giảm giá
+                    <span class="btn_headline">Chọn mã</span>
+                  </div>
+                  <div class="discount_sub">(Bạn có <span>1</span> mã giảm giá)</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

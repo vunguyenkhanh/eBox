@@ -482,6 +482,31 @@ if ($('.count2')[0]) {
   cd.start();
 }
 
+if ($('.countdown_payment')[0]) {
+  let time_minutes, time_target;
+  time_minutes = 30;
+  time_target = time_minutes * 60 * 1000;
+  time_target += new Date().getTime();
+
+  reload_time = time_minutes * 60 * 1000;
+
+  let cdtk = new Countdown({
+    cont: document.querySelector('.countdown_payment'),
+    endDate: time_target,
+    outputTranslation: {
+      minute: minute_lang,
+      second: second_lang,
+    },
+    endCallback: null,
+    outputFormat: 'minute|second',
+  });
+  cdtk.start();
+
+  setTimeout(function () {
+    window.location.href = './';
+  }, reload_time);
+}
+
 // Payment Scroll
 $(window).scroll(function () {
   if ($(this).scrollTop() > 1) {
@@ -682,4 +707,19 @@ $('.item_method').click(function () {
 // Show payment invoice
 $('#invoice').click(function () {
   $('.wrap_show_form_export_order').toggleClass('show');
+});
+
+// Show/hide product price and discount offer
+$('.btn_checkbox').click(function () {
+  if ($('.btn_checkbox.active').length > 0) {
+    $('#productItem').removeClass('d-none');
+  } else {
+    $('#productItem').addClass('d-none');
+  }
+
+  if ($('.btn_checkbox.active').length == 2) {
+    $('.wrap_discount_offers').removeClass('d-none');
+  } else {
+    $('.wrap_discount_offers').addClass('d-none');
+  }
 });

@@ -67,3 +67,27 @@ textarea {
     border-radius: 8px;
   }
 }
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+.txt_secondary {
+  color: #8f8f8f;
+}

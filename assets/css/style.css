@@ -68,6 +68,30 @@ textarea {
   border-radius: 8px;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mt-3 {
+  margin-top: 16px;
+}
+
+.txt_secondary {
+  color: #8f8f8f;
+}
+
 *,
 *::before,
 *::after {
@@ -2737,6 +2761,11 @@ footer .footer_info .copyright {
   border-radius: 8px;
   background: #ffffff;
 }
+.payment_area .cell_end_area .cell_inner.wrap_bill_sticky {
+  position: sticky;
+  z-index: 2;
+  top: 71px;
+}
 .payment_area .section_form_order {
   position: relative;
   background-color: #ffffff;
@@ -3230,7 +3259,7 @@ footer .footer_info .copyright {
   display: block;
   width: 100%;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -3247,6 +3276,9 @@ footer .footer_info .copyright {
 .payment_area .wrap_form_infomation .form_control[readonly] {
   background-color: #dadada;
 }
+.payment_area .wrap_form_infomation .validate_shipping {
+  font-size: 16px;
+}
 .payment_area .wrap_form_infomation select {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
   background-repeat: no-repeat;
@@ -3257,9 +3289,134 @@ footer .footer_info .copyright {
   margin-top: 16px;
   font-size: 14px;
 }
-
-.d-none {
-  display: none;
+.payment_area .wrap_bill {
+  max-width: 100%;
+  width: 100%;
+  line-height: 1;
+}
+.payment_area .wrap_bill .bill_body {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.payment_area .wrap_bill .wrap_discount_offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.payment_area .wrap_bill .bill_foot {
+  position: relative;
+  display: block;
+}
+.payment_area .wrap_bill .total_amount {
+  position: relative;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 5px;
+  margin-bottom: 16px;
+}
+.payment_area .wrap_bill .total_amount .value {
+  float: right;
+  color: #ff7a00;
+}
+.payment_area .wrap_bill .wrap_btn_checkout {
+  display: flex;
+  flex-flow: column;
+}
+.payment_area .wrap_bill .wrap_btn_checkout .btn_bill_checkout {
+  display: block;
+  flex: auto;
+  height: 48px;
+  color: #ffffff;
+  background-color: #ff7a00;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 4px;
+}
+.payment_area .wrap_bill .wrap_btn_checkout .wrap_countdown_payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 -8px 0;
+}
+.payment_area .wrap_bill .wrap_btn_checkout .wrap_countdown_payment .countdown_sub {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+.payment_area .wrap_bill .countdown_payment {
+  font-size: 30px;
+  transform: scale(0.7);
+  overflow: visible;
+}
+.payment_area .wrap_bill .countdown_payment .interval_cont {
+  border-radius: 4px;
+}
+.payment_area .wrap_bill .countdown_payment .digit_cont {
+  border: 0;
+  color: #696969 !important;
+  height: 36px;
+  line-height: 36px;
+}
+.payment_area .wrap_bill .countdown_payment .digit_cont .last_placeholder {
+  background: #ffffff;
+}
+.payment_area .wrap_bill .countdown_payment .digit_cont .last_rotate,
+.payment_area .wrap_bill .countdown_payment .digit_cont .new_placeholder,
+.payment_area .wrap_bill .countdown_payment .digit_cont .new_rotate {
+  background: rgba(105, 105, 105, 0.12);
+}
+.payment_area .wrap_bill .countdown_payment .digit_cont .new_rotate .rotated {
+  background: #ffffff;
+}
+.payment_area .wrap_bill .countdown_payment .description {
+  color: #696969;
+}
+.payment_area .wrap_bill .wrap_show_discount {
+  position: relative;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #dadada;
+}
+.payment_area .wrap_bill .wrap_show_discount .title_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.payment_area .wrap_bill .wrap_show_discount .title_box .btn_headline {
+  padding-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #012b75;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.payment_area .wrap_bill .wrap_show_discount .title_box .btn_headline::after {
+  position: absolute;
+  right: 0;
+  content: "\e315";
+  font-family: "Material Icons";
+  font-size: 18px;
+}
+.payment_area .wrap_bill .wrap_show_discount .discount_sub {
+  margin-top: 4px;
+  font-size: 14px;
+}
+.payment_area .wrap_bill .wrap_show_discount .discount_sub span {
+  color: #ff7a00;
+  font-weight: 500;
 }
 
 .modal_size {

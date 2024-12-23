@@ -28,6 +28,12 @@
       border: 1px solid #dadada;
       border-radius: 8px;
       background: $bg-ebox-primary-1;
+
+      &.wrap_bill_sticky {
+        position: sticky;
+        z-index: 2;
+        top: 71px;
+      }
     }
   }
 
@@ -589,7 +595,7 @@
       display: block;
       width: 100%;
       padding: 6px 12px;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 1.5;
       color: #212529;
@@ -606,6 +612,10 @@
       }
     }
 
+    .validate_shipping {
+      font-size: 16px;
+    }
+
     select {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
       background-repeat: no-repeat;
@@ -618,10 +628,160 @@
       font-size: 14px;
     }
   }
-}
 
-.d-none {
-  display: none;
+  .wrap_bill {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1;
+
+    .bill_body {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .wrap_discount_offers {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .bill_foot {
+      position: relative;
+      display: block;
+    }
+
+    .total_amount {
+      position: relative;
+      display: block;
+      font-family: $font-primary-2;
+      font-size: 18px;
+      font-weight: 600;
+      padding-top: 5px;
+      margin-bottom: 16px;
+
+      .value {
+        float: right;
+        color: $primary-1;
+      }
+    }
+
+    .wrap_btn_checkout {
+      display: flex;
+      flex-flow: column;
+
+      .btn_bill_checkout {
+        display: block;
+        flex: auto;
+        height: 48px;
+        color: $bg-ebox-primary-1;
+        background-color: $primary-1;
+        font-size: 18px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        border-radius: 4px;
+      }
+
+      .wrap_countdown_payment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 0 -8px 0;
+
+        .countdown_sub {
+          font-size: 14px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+
+    .countdown_payment {
+      font-size: 30px;
+      transform: scale(0.7);
+      overflow: visible;
+
+      .interval_cont {
+        border-radius: 4px;
+      }
+
+      .digit_cont {
+        border: 0;
+        color: #696969 !important;
+        height: 36px;
+        line-height: 36px;
+
+        .last_placeholder {
+          background: $bg-ebox-primary-1;
+        }
+
+        .last_rotate,
+        .new_placeholder,
+        .new_rotate {
+          background: rgba(105, 105, 105, 0.12);
+        }
+
+        .new_rotate {
+          .rotated {
+            background: $bg-ebox-primary-1;
+          }
+        }
+      }
+
+      .description {
+        color: #696969;
+      }
+    }
+
+    .wrap_show_discount {
+      position: relative;
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid #dadada;
+
+      .title_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $font-primary-2;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3;
+
+        .btn_headline {
+          padding-right: 20px;
+          font-family: $font-primary;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #012b75;
+          text-decoration: underline;
+          cursor: pointer;
+
+          &::after {
+            position: absolute;
+            right: 0;
+            content: '\e315';
+            font-family: 'Material Icons';
+            font-size: 18px;
+          }
+        }
+      }
+
+      .discount_sub {
+        margin-top: 4px;
+        font-size: 14px;
+
+        span {
+          color: $primary-1;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
 
 .modal_size {
