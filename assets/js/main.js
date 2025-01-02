@@ -743,6 +743,16 @@ $(document).on('click', '.control_quantity .up_num', function () {
   }
 });
 
+// Di chuyển con trỏ về cuối
+function moveCaretToEnd(element) {
+  let range = document.createRange();
+  let selection = window.getSelection();
+  range.selectNodeContents(element);
+  range.collapse(false);
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
+
 $(document).on('input', '.control_quantity .input_quantity', function () {
   let quantity = $(this);
   let value = parseInt(quantity.text().replace(/\D/g, ''));
@@ -754,6 +764,11 @@ $(document).on('input', '.control_quantity .input_quantity', function () {
     quantity.text(value);
   }
   updateButtons(quantity);
+  moveCaretToEnd(this);
+});
+
+$(document).on('focus', '.control_quantity .input_quantity', function () {
+  moveCaretToEnd(this);
 });
 
 function updateButtons(quantity) {
