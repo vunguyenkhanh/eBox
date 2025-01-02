@@ -4191,6 +4191,25 @@ footer .footer_info .copyright {
   border-top-left-radius: 15px;
   border-right: 0;
 }
+.modal_discount .modal_body .box_content .box_discount .item_discount.active {
+  border-color: #2a8cee;
+  color: #444444;
+  cursor: pointer;
+  opacity: 1;
+}
+.modal_discount .modal_body .box_content .box_discount .item_discount.active .btn_use {
+  background: #2a8cee;
+  color: #ffffff;
+  border-color: #2a8cee;
+}
+.modal_discount .modal_body .box_content .box_discount .item_discount.active .btn_use::before {
+  content: "";
+  visibility: visible;
+}
+.modal_discount .modal_body .box_content .box_discount .item_discount.active .btn_use::after {
+  content: "";
+  visibility: visible;
+}
 .modal_discount .modal_body .box_content .box_discount .item_discount_text {
   flex: auto;
 }
@@ -4237,6 +4256,30 @@ footer .footer_info .copyright {
   font-size: 14px;
   overflow: hidden;
   cursor: pointer;
+}
+.modal_discount .modal_body .box_content .box_discount .btn_use::before {
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 5px;
+  content: "";
+  width: 2px;
+  height: 6px;
+  background: #fff;
+  transform: rotateZ(-45deg);
+  visibility: hidden;
+}
+.modal_discount .modal_body .box_content .box_discount .btn_use::after {
+  position: absolute;
+  display: block;
+  top: 4px;
+  left: 10px;
+  content: "";
+  width: 2px;
+  height: 11px;
+  background: #fff;
+  transform: rotateZ(45deg);
+  visibility: hidden;
 }
 .modal_discount .modal_body .box_content .box_discount .combo_noti {
   background: #ffe4cc;

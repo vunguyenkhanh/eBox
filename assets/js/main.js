@@ -14,7 +14,7 @@ async function getData() {
 }
 
 function bindDataToUI(data) {
-  let locationSelect = $('#frm_buy_personal_province');
+  let provinceSelect = $('#frm_buy_personal_province');
   let districtSelect = $('#frm_buy_personal_district');
   let communeSelect = $('#frm_buy_personal_commune');
 
@@ -24,30 +24,30 @@ function bindDataToUI(data) {
     commune: '<option value="">Chọn xã phường</option>',
   };
 
-  locationSelect.append(defaultOptions.location);
+  provinceSelect.append(defaultOptions.location);
   districtSelect.append(defaultOptions.district);
   communeSelect.append(defaultOptions.commune);
 
   data.forEach((location) => {
-    locationSelect.append(new Option(location.Name, location.Id));
+    provinceSelect.append(new Option(location.Name, location.Id));
   });
 
-  locationSelect.on('change', function () {
-    let selectedLocation = data.find((location) => location.Id === this.value);
+  provinceSelect.on('change', function () {
+    let selectedProvince = data.find((location) => location.Id === this.value);
     districtSelect.empty().append(defaultOptions.district);
     communeSelect.empty().append(defaultOptions.commune);
 
-    if (selectedLocation) {
-      selectedLocation.Districts.sort((a, b) => a.Name.localeCompare(b.Name));
-      selectedLocation.Districts.forEach((district) => {
+    if (selectedProvince) {
+      selectedProvince.Districts.sort((a, b) => a.Name.localeCompare(b.Name));
+      selectedProvince.Districts.forEach((district) => {
         districtSelect.append(new Option(district.Name, district.Id));
       });
     }
   });
 
   districtSelect.on('change', function () {
-    let selectedLocation = data.find((location) => location.Id === locationSelect.val());
-    let selectedDistrict = selectedLocation?.Districts.find(
+    let selectedProvince = data.find((location) => location.Id === provinceSelect.val());
+    let selectedDistrict = selectedProvince?.Districts.find(
       (district) => district.Id === this.value
     );
     communeSelect.empty().append(defaultOptions.commune);
@@ -802,9 +802,13 @@ $('.btn_checkbox').click(function () {
   if ($('.btn_checkbox.active').length == 2) {
     $('.wrap_discount_offers').removeClass('d-none');
     $('.display_discount_applied').removeClass('d-none');
+    $('.item_discount').addClass('active');
+    $('.combo_noti').addClass('d-none');
   } else {
     $('.wrap_discount_offers').addClass('d-none');
     $('.display_discount_applied').addClass('d-none');
+    $('.item_discount').removeClass('active');
+    $('.combo_noti').removeClass('d-none');
   }
 });
 
