@@ -696,11 +696,13 @@ $('.btn_add_size').on('click', function () {
                     <span class="delOption">Xoá</span>
                   </div>`;
   $(this).before(htmlDiv);
+  calculateProductPrice();
 });
 
 // Delete gr_input
 $(document).on('click', '.delOption', function () {
   $(this).closest('.gr_input').remove();
+  calculateProductPrice();
 });
 
 // Show/Hide & Choose Option Size
@@ -818,12 +820,14 @@ function calculateProductPrice() {
   $('.btn_checkbox.active').each(function () {
     let itemCart = $(this).closest('.item_cart');
     let itemPrice = parseInt(itemCart.find('.item_price').text().replace(/\D/g, ''));
-    let quantity = parseInt(itemCart.find('.input_quantity').text());
-
-    if (!isNaN(itemPrice) && !isNaN(quantity)) {
-      totalPrice += itemPrice * quantity;
-      totalQuantity += quantity;
-    }
+    // Sum all quantities within this item
+    itemCart.find('.input_quantity').each(function () {
+      let quantity = parseInt($(this).text());
+      if (!isNaN(itemPrice) && !isNaN(quantity)) {
+        totalPrice += itemPrice * quantity;
+        totalQuantity += quantity;
+      }
+    });
   });
 
   $('#productItemPrice').text(totalPrice.toLocaleString('vi-VN') + ' đ');

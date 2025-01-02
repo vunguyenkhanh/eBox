@@ -79,11 +79,23 @@
                 </ul>
               </div>
             </li>
-            <li class="login" action="popup_login">
+            <li class="wrap_notify_area">
+              <button type="button" class="icon_notify">
+                <span class="material-symbols-outlined"> notifications </span>
+                <span class="count_notify d-none">0</span>
+              </button>
+            </li>
+            <li class="login">
               <div class="login_inner">
-                <button type="button" title="Đăng nhập" class="not_logged_in">
-                  <span>Đăng nhập</span>
-                </button>
+                <a href="#" class="logged">
+                  <span class="useravatar">
+                    <img
+                      src="https://a1.vnecdn.net/t31978322028634590346.jpg?w=60&amp;h=60&amp;s=8qYWkTYk64v3TvgkRt-JUg"
+                      alt="Avatar account"
+                    />
+                  </span>
+                  <span class="username">Vũ Nguyễn Khánh</span>
+                </a>
               </div>
             </li>
           </ul>
@@ -229,7 +241,7 @@
                                   type="text"
                                   class="form_control"
                                   name="fullname"
-                                  value=""
+                                  value="Vũ Nguyễn Khánh"
                                   id="frm_buy_personal_name"
                                   placeholder="Nhập họ và tên"
                                   required=""
@@ -252,7 +264,7 @@
                                   name="email"
                                   id="frm_buy_personal_email"
                                   placeholder="Nhập email"
-                                  value=""
+                                  value="vunguyenkhanh.6599@gmail.com"
                                   required=""
                                   readonly=""
                                   disabled=""
