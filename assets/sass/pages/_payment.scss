@@ -122,6 +122,14 @@
 }
 
 .login {
+  &:hover {
+    a {
+      &.logged {
+        color: inherit !important;
+      }
+    }
+  }
+
   a {
     &.logged {
       border-radius: 4px;
@@ -156,6 +164,31 @@
       max-width: 150px;
       text-overflow: ellipsis;
       overflow: hidden;
+    }
+  }
+
+  .wrap_sub_menu {
+    right: 0;
+    left: unset !important;
+
+    .nav_link {
+      &:hover {
+        background: rgba(0, 36, 124, 0.03) !important;
+        color: #003ea7 !important;
+        border: 1px solid transparent !important;
+      }
+
+      .material-icons-outlined {
+        margin-right: 3px;
+        width: 30px;
+        font-size: 20px;
+        color: #666;
+        text-align: left;
+      }
+    }
+
+    .border-t {
+      border-top: 1px solid rgba(0, 36, 124, 0.05);
     }
   }
 }

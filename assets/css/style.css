@@ -497,6 +497,8 @@ header.header_area .container nav .nav_sub_menu li .nav_link {
   align-items: center;
   color: #444444;
   font-size: 14px;
+  text-decoration: none;
+  background: 0 0;
   border: 1px solid transparent;
   border-radius: 8px;
 }
@@ -2849,6 +2851,9 @@ footer .footer_info .copyright {
   font-size: 80%;
 }
 
+.login:hover a.logged {
+  color: inherit !important;
+}
 .login a.logged {
   border-radius: 4px;
   cursor: default;
@@ -2881,6 +2886,25 @@ footer .footer_info .copyright {
   max-width: 150px;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.login .wrap_sub_menu {
+  right: 0;
+  left: unset !important;
+}
+.login .wrap_sub_menu .nav_link:hover {
+  background: rgba(0, 36, 124, 0.03) !important;
+  color: #003ea7 !important;
+  border: 1px solid transparent !important;
+}
+.login .wrap_sub_menu .nav_link .material-icons-outlined {
+  margin-right: 3px;
+  width: 30px;
+  font-size: 20px;
+  color: #666;
+  text-align: left;
+}
+.login .wrap_sub_menu .border-t {
+  border-top: 1px solid rgba(0, 36, 124, 0.05);
 }
 
 .payment_area {
