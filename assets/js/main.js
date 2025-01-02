@@ -866,6 +866,20 @@ $('.btn_checkbox').click(function () {
 // Initial calculation
 calculateProductPrice();
 
+// Hide notification
+$('.icon_notify').click(function () {
+  $('.box_dropdown').toggleClass('show');
+});
+
+$(window).click(function (e) {
+  if (
+    !$(e.target).closest('.wrap_notify_list').length &&
+    !$(e.target).closest('.icon_notify').length
+  ) {
+    $('.box_dropdown').removeClass('show');
+  }
+});
+
 // Popup Modal Discount
 $('.btn_headline').click(function () {
   $('.modal_discount').css('display', 'block');
