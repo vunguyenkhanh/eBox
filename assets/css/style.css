@@ -21,6 +21,16 @@ body {
   clear: both;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: #ff7a00;
+}
+
+::selection {
+  color: #fff;
+  background: #ff7a00;
+}
+
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
