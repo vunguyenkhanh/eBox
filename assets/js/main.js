@@ -865,3 +865,18 @@ $('.btn_checkbox').click(function () {
 
 // Initial calculation
 calculateProductPrice();
+
+// Popup Modal Discount
+$('.btn_headline').click(function () {
+  $('.modal_discount').css('display', 'block');
+});
+
+$('.modal_discount .btn_close').click(function () {
+  $('.modal_discount').css('display', 'none');
+});
+
+$(window).click(function (e) {
+  if (e.target === $('.modal_discount')[0]) {
+    $('.modal_discount').css('display', 'none');
+  }
+});
