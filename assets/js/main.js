@@ -927,3 +927,127 @@ $('.btn_apply').click(function () {
     $('.modal_incentives').css('display', 'none');
   }
 });
+
+// Comment functionality
+const commentSection = {
+  offset: 0,
+  limit: 5,
+  totalComments: 0,
+
+  init() {
+    this.loadComments();
+    this.bindEvents();
+  },
+
+  bindEvents() {
+    $('.btn_view_comment').on('click', () => {
+      this.loadComments();
+    });
+  },
+
+  async loadComments() {
+    try {
+      const response = await fetch('./assets/data/comment.json');
+      const data = await response.json();
+
+      if (data.error === 0 && data.resData.comments) {
+        this.totalComments = data.resData.comments.length; // Change to actual array length
+
+        // Get next batch of comments using offset
+        const comments = data.resData.comments;
+        const commentsToShow = comments.slice(this.offset, this.offset + this.limit);
+
+        // Generate and append HTML
+        const commentHTML = commentsToShow
+          .map((comment) => this.generateCommentHTML(comment))
+          .join('');
+
+        // Always append new comments
+        $('.list_comment').append(commentHTML);
+
+        // Update offset for next load
+        this.offset += this.limit;
+
+        // Update view more button visibility
+        this.updateViewMoreButton(comments.length);
+      }
+    } catch (error) {
+      console.error('Error loading comments:', error);
+    }
+  },
+
+  generateCommentHTML(comment) {
+    return `
+      <li class="comment_item">
+        <div class="wrap_item_comment">
+          <div class="pic_container">
+            <img class="profile_pic" src="${comment.avatar}" alt="${comment.fullname}" />
+          </div>
+          <div class="reply_container">
+            <div class="reply_content">
+              <span class="label_username">
+                ${comment.fullname}
+                ${comment.signup_course}
+              </span>
+              <div class="content_cmt">${comment.message}</div>
+              ${
+                comment.total_like > 0
+                  ? `
+                <div class="reply_reactions">
+                  <span class="item_icon"></span>
+                  <span class="number_reactions">${comment.total_like}</span>
+                </div>
+              `
+                  : ''
+              }
+            </div>
+            <div class="reply_action">
+              <div>
+                <button type="button" class="btn_reply_action">Thích</button>
+              </div>
+              <div>
+                <span>.</span>
+                <button type="button" class="btn_reply_action">Phản hồi</button>
+              </div>
+              <div>
+                <span>.</span>
+                <span class="label_time_comment">${comment.time}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        ${
+          comment.total_child > 0
+            ? `
+          <div class="comment_lv2">
+            <ul class="list_child_comment">
+              <li>
+                <div class="group_btn_inline">
+                  <button class="btn_view_reply">
+                    <span class="count_reply_comment">${comment.total_child}</span> phản hồi
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        `
+            : ''
+        }
+      </li>
+    `;
+  },
+
+  updateViewMoreButton(totalComments) {
+    const viewMoreBtn = $('.group_view_more');
+    if (this.offset >= totalComments) {
+      viewMoreBtn.hide(); // Hide when all comments loaded
+    } else {
+      viewMoreBtn.show(); // Show if there are more comments to load
+    }
+  },
+};
+
+// Initialize comment section when document is ready
+$(document).ready(() => {
+  commentSection.init();
+});
