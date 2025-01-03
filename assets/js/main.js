@@ -210,6 +210,19 @@ const slide_gallery = new Swiper('.slide_gallery', {
   },
 });
 
+const slide_outstanding_momemt = new Swiper('.slide_outstanding_momemt', {
+  slidesPerView: 3,
+  spaceBetween: 16,
+  loop: true,
+  loopFillGroupWithBlank: false,
+  speed: 600,
+  watchOverflow: true,
+  navigation: {
+    nextEl: '.swiper_button_next_outstanding_momemt',
+    prevEl: '.swiper_button_prev_outstanding_momemt',
+  },
+});
+
 const slide_related_post = new Swiper('.slide_related_post', {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -512,7 +525,7 @@ class Countdown {
   }
 }
 
-let endDate = '2024/12/18, 11:47:02';
+let endDate = '2025/01/03, 14:56:01';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({
