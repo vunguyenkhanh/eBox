@@ -802,18 +802,19 @@ $('.btn_checkbox').click(function () {
   if ($('.btn_checkbox.active').length == 2) {
     $('.wrap_discount_offers').removeClass('d-none');
     $('.display_discount_applied').removeClass('d-none');
-    $('.item_discount').addClass('active');
+    $('.item_incentives').addClass('active');
     $('.combo_noti').addClass('d-none');
   } else {
     $('.wrap_discount_offers').addClass('d-none');
     $('.display_discount_applied').addClass('d-none');
-    $('.item_discount').removeClass('active');
+    $('.item_incentives').removeClass('active');
     $('.combo_noti').removeClass('d-none');
   }
 });
 
 $('.btn_remove').click(function () {
   $('.display_discount_applied').addClass('d-none');
+  $('.item_incentives').removeClass('active');
 });
 
 // Calculate product price
@@ -886,15 +887,30 @@ $(window).click(function (e) {
 
 // Popup Modal Discount
 $('.btn_headline').click(function () {
-  $('.modal_discount').css('display', 'block');
+  $('.modal_incentives').css('display', 'block');
 });
 
-$('.modal_discount .btn_close').click(function () {
-  $('.modal_discount').css('display', 'none');
+$('.modal_incentives .btn_close').click(function () {
+  $('.modal_incentives').css('display', 'none');
 });
 
 $(window).click(function (e) {
-  if (e.target === $('.modal_discount')[0]) {
-    $('.modal_discount').css('display', 'none');
+  if (e.target === $('.modal_incentives')[0]) {
+    $('.modal_incentives').css('display', 'none');
+  }
+});
+
+$('.btn_use').click(function () {
+  if ($('.btn_checkbox.active').length !== 2) {
+    alert('Chọn áo và huy chương để được hưởng ưu đãi');
+  } else {
+    $('.item_incentives').addClass('active');
+  }
+});
+
+$('.btn_apply').click(function () {
+  if ($('.item_incentives').hasClass('active')) {
+    $('.display_discount_applied').removeClass('d-none');
+    $('.modal_incentives').css('display', 'none');
   }
 });

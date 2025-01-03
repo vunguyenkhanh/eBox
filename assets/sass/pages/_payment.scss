@@ -1450,7 +1450,7 @@
   }
 }
 
-.modal_discount {
+.modal_incentives {
   display: none;
   position: fixed;
   top: 0;
@@ -1533,7 +1533,7 @@
       text-align: left;
       overflow: hidden;
 
-      .box_discount {
+      .box_incentives {
         position: relative;
         display: block;
         margin: 0;
@@ -1571,6 +1571,10 @@
               background: $bg-ebox-primary-1;
               border: 1px solid #ceccd2;
               border-radius: 4px 0 0 4px;
+
+              &:focus {
+                border: 2px solid $secondary-blue;
+              }
             }
 
             .btn_check_code {
@@ -1593,7 +1597,7 @@
           }
         }
 
-        .list_item_discount {
+        .list_item_incentives {
           position: relative;
           display: block;
           width: 100%;
@@ -1604,7 +1608,7 @@
           max-height: 480px;
         }
 
-        .item_discount {
+        .item_incentives {
           position: relative;
           width: 100%;
           height: auto;
@@ -1675,7 +1679,7 @@
           }
         }
 
-        .item_discount_text {
+        .item_incentives_text {
           flex: auto;
         }
 
