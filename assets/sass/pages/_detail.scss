@@ -1078,6 +1078,9 @@
         flex-grow: 1;
         list-style: none;
         padding-inline-start: 0;
+        position: relative;
+        width: 100%;
+        background: $bg-ebox-primary-1;
 
         li {
           position: relative;
@@ -1108,6 +1111,10 @@
         display: flex;
         flex-grow: 1;
         z-index: 1;
+
+        &.item_comment_lv2 {
+          padding-left: 40px;
+        }
       }
 
       .pic_container {
@@ -1152,6 +1159,26 @@
                 display: inline-block;
                 width: 16px;
                 margin-right: 5px;
+                text-align: center;
+              }
+            }
+
+            .verified {
+              user-select: none;
+
+              &::after {
+                content: '\e5ca';
+                font-family: 'Material Icons';
+                font-weight: 400;
+                font-size: 9px;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                margin-left: 5px;
+                color: $bg-ebox-primary-1;
+                background: #2e89ff;
+                border-radius: 50%;
                 text-align: center;
               }
             }
@@ -1268,6 +1295,8 @@
           background: rgba(239, 242, 245, 0.9);
           left: 16px;
           top: 17px;
+          pointer-events: none;
+          opacity: 1;
         }
 
         ul {

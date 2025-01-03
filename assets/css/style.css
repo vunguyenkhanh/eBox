@@ -2226,6 +2226,9 @@ footer .footer_info .copyright {
   flex-grow: 1;
   list-style: none;
   padding-inline-start: 0;
+  position: relative;
+  width: 100%;
+  background: #ffffff;
 }
 .section_comment_detail .tab_content_comments .comments ul li {
   position: relative;
@@ -2250,6 +2253,9 @@ footer .footer_info .copyright {
   display: flex;
   flex-grow: 1;
   z-index: 1;
+}
+.section_comment_detail .tab_content_comments .comments .wrap_item_comment.item_comment_lv2 {
+  padding-left: 40px;
 }
 .section_comment_detail .tab_content_comments .comments .pic_container .profile_pic {
   width: 32px;
@@ -2293,6 +2299,26 @@ footer .footer_info .copyright {
   display: inline-block;
   width: 16px;
   margin-right: 5px;
+  text-align: center;
+}
+.section_comment_detail .tab_content_comments .comments .reply_container .reply_content .label_username .verified {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.section_comment_detail .tab_content_comments .comments .reply_container .reply_content .label_username .verified::after {
+  content: "\e5ca";
+  font-family: "Material Icons";
+  font-weight: 400;
+  font-size: 9px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  margin-left: 5px;
+  color: #ffffff;
+  background: #2e89ff;
+  border-radius: 50%;
   text-align: center;
 }
 .section_comment_detail .tab_content_comments .comments .reply_container .reply_content .reply_reactions {
@@ -2392,6 +2418,8 @@ footer .footer_info .copyright {
   background: rgba(239, 242, 245, 0.9);
   left: 16px;
   top: 17px;
+  pointer-events: none;
+  opacity: 1;
 }
 .section_comment_detail .tab_content_comments .comments .comment_lv2 ul li {
   position: relative;

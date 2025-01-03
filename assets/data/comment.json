@@ -11,7 +11,22 @@
         "avatar": "https://a1.vnecdn.net/t81561874944065388793.jpg?w=60\u0026amp;h=60\u0026amp;s=2JISKrBs9OeZuc1vEgGqvA",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 631,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@Philip Nguyen D\u1ea1 v\u1eadt ph\u1ea9m s\u1ebd c\u00f3 trong th\u00e1ng n\u00e0y \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "1 th\u00e1ng tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 627,
@@ -22,7 +37,22 @@
         "avatar": "https://a1.vnecdn.net/t41065884983548017506.jpg?w=60\u0026amp;h=60\u0026amp;s=Q4oNl95t0qx_kS0ibQ2JbA",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 630,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@nhidongnai Ch\u00e0o b\u1ea1n, Kh\u00f3a h\u1ecdc g\u1ed3m 11 video v\u1edbi th\u1eddi l\u01b0\u1ee3ng 2h23\u0027, v\u00e0 k\u00e8m gi\u00e1o \u00e1n cho ng\u01b0\u1eddi m\u1edbi chinh ph\u1ee5c c\u1ef1 ly 5 km, 10 km, 21km, 42km \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "1 th\u00e1ng tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 670,
@@ -33,7 +63,22 @@
         "avatar": "https://a1.vnecdn.net/t11479324188501047727.jpeg?w=60\u0026amp;h=60\u0026amp;s=hnbw9kzknzHQn4AgBZd4UA",
         "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 672,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@Le Thang C\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 \u0111\u0103ng k\u00fd ch\u01b0\u01a1ng tr\u00ecnh \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 650,
@@ -44,7 +89,22 @@
         "avatar": "https://a1.vnecdn.net/s21148867166697136875.png?w=60\u0026amp;h=60\u0026amp;s=A-vWge_xrpk4eMpkUy3Lew",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 651,
+            "course_id": 76,
+            "total_like": 1,
+            "liked": false,
+            "message": "@Tuong Ho thien Ch\u00e0o b\u1ea1n, Sau khi b\u1ea1n ho\u00e0n th\u00e0nh kh\u00f3a h\u1ecdc v\u00e0 nh\u1eadn \u0111\u01b0\u1ee3c ch\u1ee9ng nh\u1eadn. eBox s\u1ebd g\u1eedi v\u1eadt ph\u1ea9m theo \u0111\u1ecba ch\u1ec9 \u0111\u00e3 cung c\u1ea5p trong gi\u1eefa th\u00e1ng 1 \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 648,
@@ -55,7 +115,22 @@
         "avatar": "https://a1.vnecdn.net/t31174204908425930119.jpg?w=60\u0026amp;h=60\u0026amp;s=dTSXQIvKUIrEv7zC773zmw",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 652,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@thanhnd.dinhan D\u1ea1, sau khi b\u1ea1n mua kh\u00f3a h\u1ecdc, b\u1ea1n c\u00f3 th\u1ec3 v\u00e0o nh\u1ea5n v\u00e0o n\u00fat play tr\u00ean trang hi\u1ec7n t\u1ea1i ho\u1eb7c v\u00e0o trang Qu\u1ea3n l\u00fd v\u00e9 \u0111\u1ec3 xem c\u00e1c ch\u01b0\u01a1ng tr\u00ecnh \u0111\u00e3 \u0111\u0103ng k\u00fd: https://ebox.com.vn/user/quan-ly-ve-ca-nhan.html",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 645,
@@ -68,8 +143,22 @@
         "avatar": "https://a1.vnecdn.net/s21148867166697136875.png?w=60\u0026amp;h=60\u0026amp;s=A-vWge_xrpk4eMpkUy3Lew",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 653,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@Tuong Ho thien Ch\u00e0o b\u1ea1n, Sau khi b\u1ea1n ho\u00e0n th\u00e0nh kh\u00f3a h\u1ecdc v\u00e0 nh\u1eadn \u0111\u01b0\u1ee3c ch\u1ee9ng nh\u1eadn. eBox s\u1ebd g\u1eedi v\u1eadt ph\u1ea9m theo \u0111\u1ecba ch\u1ec9 \u0111\u00e3 cung c\u1ea5p trong gi\u1eefa th\u00e1ng 1 \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 641,
@@ -82,8 +171,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 656,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@w6jhgbgqdx D\u1ea1 eBox \u0111\u00e3 h\u1ed7 tr\u1ee3 h\u01b0\u1edbng d\u1eabn b\u1ea1n chuy\u1ec3n kh\u00f3a h\u1ecdc cho email m\u1edbi c\u1ee7a b\u1ea1n r\u1ed3i \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 635,
@@ -96,8 +199,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 636,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@doantrangbui Ch\u00e0o b\u1ea1n, \u0111\u01a1n chuy\u1ec3n kho\u1ea3n c\u1ee7a b\u1ea1n \u0111\u00e3 \u0111\u01b0\u1ee3c duy\u1ec7t v\u00e0 c\u1ea5p v\u00e9, b\u1ea1n nh\u1ea5n v\u00e0o n\u00fat Play tr\u00ean trang \u0111\u1ec3 v\u00e0o xem \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 634,
@@ -110,8 +227,22 @@
         "avatar": "https://a1.vnecdn.net/t81360543063967846573.png?w=60\u0026amp;h=60\u0026amp;s=4kcF6e7F72NDP_dhl6500w",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 638,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@Kh\u1ee5t Kh\u1ecbt c\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 quan t\u00e2m v\u00e0 \u0111\u0103ng k\u00fd ch\u01b0\u01a1ng tr\u00ecnh",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 629,
@@ -124,8 +255,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 633,
+            "course_id": 76,
+            "total_like": 1,
+            "liked": false,
+            "message": "@Vy Tien Le Ch\u00e0o b\u1ea1n, kh\u00f3a h\u1ecdc \u0111\u00e3 \u0111\u01b0\u1ee3c m\u1edf r\u1ed3i \u1ea1, b\u1ea1n nh\u1ea5n v\u00e0o n\u00fat play \u0111\u1ec3 v\u00e0o trang ph\u00e1t video \u1ea1.",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "1 th\u00e1ng tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 626,
@@ -138,8 +283,22 @@
         "avatar": "https://a1.vnecdn.net/t71862894434907478398.jpg?w=60\u0026amp;h=60\u0026amp;s=6P9ftBccLfoQPA1RedSCgA",
         "time": "1 th\u00e1ng tr\u01b0\u1edbc",
         "signup_course": "",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 632,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@L\u00ea Tr\u1ecdng Phong D\u1ea1 t\u1ea5t c\u1ea3 nh\u1eefng n\u1ed9i dung n\u00e0y \u0111\u1ec1u c\u00f3 trong kh\u00f3a h\u1ecdc \u1ea1, HLV h\u01b0\u1edbng d\u1eabn chi ti\u1ebft, tr\u1ef1c quan v\u00e0 d\u1ec5 hi\u1ec3u, \u0111\u1ec3 ai c\u0169ng c\u00f3 th\u1ec3 th\u1ef1c h\u00e0nh m\u1ecdi n\u01a1i",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "1 th\u00e1ng tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 668,
@@ -152,8 +311,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 673,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@ptvu.zen Ch\u00e0o b\u1ea1n, eBox \u0111\u00e3 g\u1eedi email h\u1ed7 tr\u1ee3 cho b\u1ea1n r\u1ed3i \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 662,
@@ -166,8 +339,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 665,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@trungngo.tbt Ch\u00e0o b\u1ea1n, email b\u1ea1n \u0111\u0103ng k\u00fd kh\u00f3a h\u1ecdc v\u00e0 email hi\u1ec7n t\u1ea1i l\u00e0 2 email kh\u00e1c nhau, n\u00ean eBox \u0111\u00e3 h\u1ed7 tr\u1ee3 chuy\u1ec3n v\u00e9 qua t\u00e0i kho\u1ea3n m\u1edbi c\u1ee7a b\u1ea1n r\u1ed3i \u1ea1. B\u1ea1n vui l\u00f2ng ki\u1ec3m tra email \u0111\u1ec3 \u0111\u01b0\u1ee3c h\u01b0\u1edbng d\u1eabn \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 661,
@@ -180,8 +367,22 @@
         "avatar": "https://a1.vnecdn.net/t31162759438912119593.png?w=60\u0026amp;h=60\u0026amp;s=P2NCqbDtR4NLJSfukxNV5A",
         "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 664,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@Hong Nguyen Ch\u00e0o b\u1ea1n, sau khi b\u1ea1n mua b\u00ean vRace, eBox \u0111\u00e3 g\u1eedi mail k\u00edch ho\u1ea1t v\u00e9 kh\u00f3a h\u1ecdc r\u1ed3i \u1ea1. B\u1ea1n vui l\u00f2ng ki\u1ec3m tra email trong h\u1ed9p th\u01b0 inbox ho\u0103c spam \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "2 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 644,
@@ -194,8 +395,22 @@
         "avatar": "https://s1.vnecdn.net/myvne/i/v1/graphics/img_60x60.gif",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 654,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@chieclaphudu7897 Ch\u00e0o b\u1ea1n, b\u1ea1n c\u00f3 th\u1ec3 cung c\u1ea5p eBox mong mu\u1ed1n chuy\u1ec3n v\u00e9 \u0111\u1ec3 eBox h\u1ed7 tr\u1ee3 chuy\u1ec3n cho m\u00ecnh \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 642,
@@ -208,8 +423,22 @@
         "avatar": "https://a1.vnecdn.net/t71770383744977974684.png?w=60\u0026amp;h=60\u0026amp;s=a9PhXD9hG2LCcmriJCdSlw",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 655,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@yennguyen1108 d\u1ea1 eBox \u0111\u00e3 li\u00ean h\u1ec7 v\u00e0 h\u1ed7 tr\u1ee3 m\u00ecnh \u0111\u0103ng k\u00fd r\u1ed3i \u1ea1",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       },
       {
         "id": 639,
@@ -222,8 +451,22 @@
         "avatar": "https://a1.vnecdn.net/t41567484160109708609.png?w=60\u0026amp;h=60\u0026amp;s=j80S8plUsUJKPZrdzJt95Q",
         "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
         "signup_course": "\u003Cspan class=\u0022regitered\u0022\u003E\u0110\u00e3 \u0111\u0103ng k\u00fd\u003C/span\u003E",
-        "speaker": "",
-        "total_child": 1
+        "total_child": 1,
+        "child_comment": [
+          {
+            "id": 640,
+            "course_id": 76,
+            "total_like": 0,
+            "liked": false,
+            "message": "@tranhoan.hoangson B\u1ea1n cung c\u1ea5p email \u0111\u00e3 \u0111\u0103ng k\u00fd ch\u01b0\u01a1ng tr\u00ecnh b\u00ean vRace, \u0111\u1ec3 m\u00ecnh ki\u1ec3m tra l\u1ea1i nh\u00e9",
+            "fullname": "eBox Admin",
+            "verified": "\u003Cspan class=\u0022verified\u0022 title=\u0022T\u00e0i kho\u1ea3n x\u00e1c th\u1ef1c\u0022\u003E\u003C/span\u003E",
+            "avatar": "https://a1.vnecdn.net/t71460991633709670494.jpg?w=60\u0026amp;h=60\u0026amp;s=eoe45UA_xS_3nVaBzpo0fQ",
+            "time": "4 tu\u1ea7n tr\u01b0\u1edbc",
+            "signup_course": "",
+            "total_child": 0
+          }
+        ]
       }
     ],
     "continue": true,

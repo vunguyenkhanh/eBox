@@ -943,6 +943,46 @@ const commentSection = {
     $('.btn_view_comment').on('click', () => {
       this.loadComments();
     });
+
+    $(document).on('click', '.btn_view_reply', async (e) => {
+      const button = $(e.currentTarget);
+      const commentId = button.data('comment-id');
+      const childCommentsList = button.closest('.list_child_comment');
+      const groupBtnInline = button.closest('.group_btn_inline');
+
+      // Check if child comments are already loaded
+      if (button.hasClass('loaded')) {
+        // Toggle visibility of child comments and button
+        childCommentsList.find('.item_comment_lv2').parent().toggle();
+        groupBtnInline.toggle();
+        return;
+      }
+
+      try {
+        const response = await fetch('./assets/data/comment.json');
+        const data = await response.json();
+
+        // Find the parent comment and its child comments
+        const parentComment = data.resData.comments.find((c) => c.id === commentId);
+        if (parentComment && parentComment.child_comment) {
+          // Generate HTML for each child comment
+          const childCommentsHTML = parentComment.child_comment
+            .map((child) => this.generateChildCommentHTML(child))
+            .join('');
+
+          // Insert child comments after the view reply button
+          button.closest('li').after(childCommentsHTML);
+
+          // Hide the group_btn_inline
+          groupBtnInline.hide();
+
+          // Mark button as loaded
+          button.addClass('loaded');
+        }
+      } catch (error) {
+        console.error('Error loading child comments:', error);
+      }
+    });
   },
 
   async loadComments() {
@@ -1023,7 +1063,7 @@ const commentSection = {
             <ul class="list_child_comment">
               <li>
                 <div class="group_btn_inline">
-                  <button class="btn_view_reply">
+                  <button class="btn_view_reply" data-comment-id="${comment.id}">
                     <span class="count_reply_comment">${comment.total_child}</span> phản hồi
                   </button>
                 </div>
@@ -1033,6 +1073,50 @@ const commentSection = {
         `
             : ''
         }
+      </li>
+    `;
+  },
+
+  generateChildCommentHTML(childComment) {
+    return `
+      <li>
+        <div class="wrap_item_comment item_comment_lv2">
+          <div class="pic_container">
+            <img class="profile_pic" src="${childComment.avatar}" alt="${childComment.fullname}" />
+          </div>
+          <div class="reply_container">
+            <div class="reply_content">
+              <span class="label_username">
+                ${childComment.fullname}
+                ${childComment.verified || ''}
+              </span>
+              <div class="content_cmt">${childComment.message}</div>
+              ${
+                childComment.total_like > 0
+                  ? `
+                <div class="reply_reactions">
+                  <span class="item_icon"></span>
+                  <span class="number_reactions">${childComment.total_like}</span>
+                </div>
+              `
+                  : ''
+              }
+            </div>
+            <div class="reply_action">
+              <div>
+                <button type="button" class="btn_reply_action">Thích</button>
+              </div>
+              <div>
+                <span>.</span>
+                <button type="button" class="btn_reply_action">Phản hồi</button>
+              </div>
+              <div>
+                <span>.</span>
+                <span class="label_time_comment">${childComment.time}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
     `;
   },
