@@ -2461,6 +2461,21 @@ footer .footer_info .copyright {
   color: #013ea7;
 }
 
+.loadingComment {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+.loadingComment .loading-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.loadingComment img {
+  width: 24px;
+  height: 24px;
+}
+
 .section_news_ticket {
   margin: 20px 0;
 }

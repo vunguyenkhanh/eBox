@@ -1349,6 +1349,23 @@
   }
 }
 
+.loadingComment {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+
+  .loading-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .section_news_ticket {
   margin: 20px 0;
 

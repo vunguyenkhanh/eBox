@@ -525,7 +525,7 @@ class Countdown {
   }
 }
 
-let endDate = '2025/01/03, 14:56:01';
+let endDate = '2025/01/03, 22:18:14';
 if ($('.count1')[0]) {
   if (endDate != null) {
     let cdtk = new Countdown({
@@ -933,6 +933,8 @@ const commentSection = {
   offset: 0,
   limit: 5,
   totalComments: 0,
+  iconLoading:
+    '<div class="loadingComment"><div class="loading-content"><img src="https://ebox.com.vn/images/loading.gif" alt="Loading...">loading</div></div>',
 
   init() {
     this.loadComments();
@@ -941,7 +943,24 @@ const commentSection = {
 
   bindEvents() {
     $('.btn_view_comment').on('click', () => {
-      this.loadComments();
+      // Hide the view more button while loading
+      const $viewMoreBtn = $('.btn_view_comment');
+      $viewMoreBtn.hide();
+
+      // Add loading indicator before the group_view_more div
+      $('.group_view_more').before(this.iconLoading);
+
+      // Simulate loading delay
+      setTimeout(() => {
+        this.loadComments();
+        // Remove loading indicator after comments are loaded
+        $('.loadingComment').remove();
+
+        // Only show button if there are more comments to load
+        if (this.offset < this.totalComments) {
+          $viewMoreBtn.show();
+        }
+      }, 1000);
     });
 
     $(document).on('click', '.btn_view_reply', async (e) => {
@@ -958,7 +977,14 @@ const commentSection = {
         return;
       }
 
+      // Add loading indicator after the button
+      button.after(this.iconLoading);
+      button.hide();
+
       try {
+        // Simulate loading delay
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+
         const response = await fetch('./assets/data/comment.json');
         const data = await response.json();
 
@@ -970,7 +996,8 @@ const commentSection = {
             .map((child) => this.generateChildCommentHTML(child))
             .join('');
 
-          // Insert child comments after the view reply button
+          // Remove loading indicator before adding comments
+          $('.loadingComment').remove();
           button.closest('li').after(childCommentsHTML);
 
           // Hide the group_btn_inline
@@ -981,6 +1008,9 @@ const commentSection = {
         }
       } catch (error) {
         console.error('Error loading child comments:', error);
+        // Remove loading and restore button on error
+        $('.loadingComment').remove();
+        button.show();
       }
     });
   },
@@ -1122,11 +1152,14 @@ const commentSection = {
   },
 
   updateViewMoreButton(totalComments) {
-    const viewMoreBtn = $('.group_view_more');
+    const $viewMoreBtn = $('.btn_view_comment');
+    const $viewMoreContainer = $('.group_view_more');
+
     if (this.offset >= totalComments) {
-      viewMoreBtn.hide(); // Hide when all comments loaded
+      $viewMoreContainer.hide(); // Hide container when all comments loaded
     } else {
-      viewMoreBtn.show(); // Show if there are more comments to load
+      $viewMoreContainer.show(); // Show container if more comments exist
+      $viewMoreBtn.show(); // Ensure button is visible
     }
   },
 };
